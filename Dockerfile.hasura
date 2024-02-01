@@ -1,0 +1,7 @@
+FROM hasura/graphql-engine:v2.36.0.cli-migrations-v3
+
+RUN mkdir -p /hasura-migrations
+RUN mkdir -p /hasura-metadata
+
+COPY ./cleanslate/migrations /hasura-migrations
+COPY ./cleanslate/metadata /hasura-metadata
